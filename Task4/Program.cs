@@ -4,15 +4,20 @@
 Console.Write("Please input a number: ");
 int number = Convert.ToInt32(Console.ReadLine());
 int current = 1;
-while(current <= number)
+if (number <= 1)
 {
-    if(current % 2 == 0)
-    {
-    Console.Write(current + " ");
-    current = current + 2;
-    }
-    else
-    {
-    current = current + 1;
-    }
+    Console.Write("We have no even numbers");
 }
+else
+    while(current <= number)
+    {
+        if(current % 2 == 0)
+        {
+        Console.Write(current + " ");
+        current = current + 2;
+        }
+        else
+        {
+        current = current + 1;
+        }
+    } 
