@@ -9,7 +9,7 @@ int cutnumber(int number)
 }
 Console.WriteLine("Please input your number ");
 int number = Convert.ToInt32(Console.ReadLine());
-if(-999 <= number && number <= 999 && number != 0)
+if((-999 <= number && number <= -100) || (number <= 999 && number >= 100 && number != 0))
 {
     if (1 <= number && number <= 999)
     {
