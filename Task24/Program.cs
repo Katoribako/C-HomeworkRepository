@@ -16,18 +16,18 @@ int[,] Create2drandomArray(int rows, int columns, int minValue, int maxValue)
 
 int columnsRowReplacer(int row, int column)
 {
-  int memory = column;
-  column = row;
-  row = memory;
-  return row;
+    int memory = column;
+    column = row;
+    row = memory;
+    return row;
 }
 
 int rowColumnsReplacer(int row, int column)
 {
-  int memory = row;
-  row = column;
-  column = memory;
-  return column;
+    int memory = row;
+    row = column;
+    column = memory;
+    return column;
 }
 
 void Show2dArray(int[,] array)
@@ -44,18 +44,18 @@ void Show2dArray(int[,] array)
 }
 void matrixMultiplication(int[,] firsMatrix, int[,] secMatrix, int[,] multiResult)
 {
-  for (int i = 0; i < multiResult.GetLength(0); i++)
-  {
-    for (int j = 0; j < multiResult.GetLength(1); j++)
+    for (int i = 0; i < multiResult.GetLength(0); i++)
     {
-      int sum = 0;
-      for (int k = 0; k < firsMatrix.GetLength(1); k++)
-      {
-        sum += firsMatrix[i,k] * secMatrix[k,j];
-      }
-      multiResult[i,j] = sum;
+        for (int j = 0; j < multiResult.GetLength(1); j++)
+        {
+            int sum = 0;
+            for (int k = 0; k < firsMatrix.GetLength(1); k++)
+            {
+                sum += firsMatrix[i, k] * secMatrix[k, j];
+            }
+            multiResult[i, j] = sum;
+        }
     }
-  }
 }
 
 Console.WriteLine("Please input a number of row ");
@@ -75,7 +75,7 @@ int secColumn = rowColumnsReplacer(rows, columns);
 int[,] secondMatrix = Create2drandomArray(secRow, secColumn, minValue, maxValue);
 Console.WriteLine("Second matrix is");
 Show2dArray(secondMatrix);
-int[,] multiplyResultMatrix = new int[rows,secColumn];
+int[,] multiplyResultMatrix = new int[rows, secColumn];
 matrixMultiplication(firstMatrix, secondMatrix, multiplyResultMatrix);
 Console.WriteLine("Result of multiplcation of matrix is ");
 Show2dArray(multiplyResultMatrix);
